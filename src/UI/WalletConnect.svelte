@@ -1,6 +1,5 @@
 <script>
-    import { onMount } from 'svelte';
-
+    //import { onMount } from 'svelte';
     import {Button} from "carbon-components-svelte";
     //import { goto } from '$app/navigation';
     import { defaultEvmStores, web3} from 'svelte-web3'
@@ -21,8 +20,7 @@
             return userSesh
         })
     }
-
-    //const enable = () => defaultEvmStores.setProvider('https://7bc8abe60fb941df8cfba6d3a4264dde:8326e794a7cc443f90725e2536d3fa8e@mainnet.infura.io/v3/7bc8abe60fb941df8cfba6d3a4264dde')
+    //const enable = () => defaultEvmStores.setProvider('https://:@mainnet.infura.io/v3/7bc8abe60fb941df8cfba6d3a4264dde')
     const enableBrowser = async ()  => {
                         //console.log(window.walletLinkExtension.isWalletLink)
             walletConnected =  window.walletLinkExtension.isConnected()
