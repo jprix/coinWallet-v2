@@ -3,7 +3,8 @@ import { browser } from '$app/env';
 
 let storesUserSession;
 let defaultUser = {
-    "isLoggedIn" : false
+    "isLoggedIn" : false,
+    "access_token": ""
 }
 if(browser){
      storesUserSession = localStorage.userSession
