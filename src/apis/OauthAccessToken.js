@@ -5,8 +5,8 @@ export const getOauthToken = async (code) => {
     let payload = {
         "grant_type":"authorization_code",
         "code": code,
-        "client_id": "749d445a2ef58ce55108bec312ed558faa39a4b9292c55d0baf6cb405e4ffdd4",
-        "client_secret": "749d445a2ef58ce55108bec312ed558faa39a4b9292c55d0baf6cb405e4ffdd4",
+        "client_id": "Your CLIENT ID",
+        "client_secret": "YOUR SECRET",
         "redirect_uri": "http://localhost:3000/"
 
 }
