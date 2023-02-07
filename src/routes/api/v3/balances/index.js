@@ -1,8 +1,8 @@
 export async function get(request) {
   console.log(request.url.searchParams.get('access_token'));
   const access_token = request.url.searchParams.get('access_token');
-  console.log(access_token);
-  let url = `https://api.coinbase.com/v2/accounts`;
+  console.log('v3 hit ', access_token);
+  let url = `https://api.coinbase.com/v3/brokerage/accounts`;
   const getAccounts = await fetch(url, {
     credentials: 'include',
     method: 'GET',
@@ -13,8 +13,10 @@ export async function get(request) {
       Authorization: 'Bearer ' + access_token,
     },
   });
-  const userProfile = await getAccounts.json();
-  const result = userProfile.data;
+  console.log(getAccounts);
+  const accountList = await getAccounts.json();
+  console.log(accountList);
+  const result = accountList.accounts;
   return {
     status: 200,
     body: result,
